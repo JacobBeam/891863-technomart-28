@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Виталий Павлов](https://up.htmlacademy.ru/htmlcss/28/user/891863).
-* Наставник: [Алексей Пудников] (https://up.htmlacademy.ru/htmlcss/28/user/71418).
+* Наставник: [Алексей Пудников](https://up.htmlacademy.ru/htmlcss/28/user/71418).
 
 ---
 
