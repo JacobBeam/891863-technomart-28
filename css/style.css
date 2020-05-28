@@ -55,6 +55,16 @@ img {
     overflow: hidden;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.svg-icon {
+    fill: currentColor;
+}
+
 
 /* Скрыты попапы*/
 
@@ -399,13 +409,13 @@ img {
     list-style: none;
 }
 
-.catalog-item-title {
+.catalog-article-title {
     font-weight: bold;
     font-size: 18px;
     line-height: 20px;
 }
 
-.old-price {
+.catalog-article-old-price {
     font-weight: bold;
     font-size: 17px;
     line-height: 18px;
@@ -414,7 +424,7 @@ img {
     color: var(--old-price);
 }
 
-.price {
+.catalog-article-price {
     font-weight: bold;
     font-size: 17px;
     line-height: 18px;
