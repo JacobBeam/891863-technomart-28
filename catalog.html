@@ -46,7 +46,7 @@
                 <li class="profile-item">
                     <a class="profile-link" href="#">
                         <span class="visually-hidden">Профиль</span>
-                        <svg class="svg-icon" class="profile-svg" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="svg-icon profile-svg" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z" fill="#C5C5C5"/>
                             </svg>
                     </a>
@@ -57,7 +57,7 @@
                 <li class="profile-item">
                     <a class="profile-link" href="#">
                         <span class="visually-hidden">Выход</span>
-                        <svg class="svg-icon" class="profile-svg" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="svg-icon profile-svg" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
                             <path d="M2.10591 13.952V3.048C2.12391 2.672 2.27691 1.991 3.11591 1.991H8.14291V0H3.11591C0.937914 0 0.111914 1.81 0.0869141 3.027V13.973C0.111914 15.189 0.937914 17 3.11591 17H8.14291V15.01H3.11591C2.27691 15.01 2.12391 14.327 2.10591 13.952Z" fill="#C5C5C5"/>
                             </svg>
@@ -125,12 +125,18 @@
 
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form class="filter" action="https://echo.htmlacademy.ru/" method="GET">
-                <p>Фильтр:</p>
+                <p class="filter-title">Фильтр:</p>
                 <fieldset class="filter-field">
                     <legend>Цена:</legend>
                     <!-- Здесь будет модель интерактивного изменения цены-->
                     <div> </div>
-                    <div><span>0</span>-<span>30000</span></div>
+                    <div class="output-price">
+                        <label class="visually-hidden" for="min-price">Минимальная цена</label>
+                        <input type="text" name="min-price" id="min-price" value="0">
+                        <span>-</span>
+                        <label class="visually-hidden" for="max-price">Максимальная цена</label>
+                        <input type="text" name="max-price" id="max-price" value="30000">
+                    </div>
                 </fieldset>
 
                 <fieldset class="filter-field">
@@ -174,15 +180,25 @@
                 <button class="filter-button" type="submit">Показать</button>
             </form>
         </section>
-        <section>
+        <section class="sorting">
             <h2 class="visually-hidden">Сортировка товара</h2>
-            <p>Сортировка</p>
-            <ul>
-                <li><a href="#">По цена</a></li>
-                <li><a href="#">По типу</a></li>
-                <li><a href="#">По функционалу</a></li>
-                <li><a href="#">По возрастанию</a></li>
-                <li><a href="#">По убыванию</a></li>
+            <p>Сортировка:</p>
+            <ul class="sorting-list">
+                <li class="sorting-list">
+                    <a class="sorting-link" href="#">По цена</a>
+                </li>
+                <li class="sorting-list">
+                    <a class="sorting-link" href="#">По типу</a>
+                </li>
+                <li class="sorting-list">
+                    <a class="sorting-link" href="#">По функционалу</a>
+                </li>
+                <li class="sorting-list">
+                    <a class="sorting-link" href="#">По возрастанию</a>
+                </li>
+                <li class="sorting-list">
+                    <a class="sorting-link" href="#">По убыванию</a>
+                </li>
             </ul>
         </section>
         <section>
@@ -260,15 +276,23 @@
                     </article>
                 </li>
             </ul>
-            <ul>
-                <li><a>1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">Следующая</a></li>
+            <ul class="pagination-list">
+                <li class="pagination-item">
+                    <a class="pagination-link pagination-link-active">1</a>
+                </li>
+                <li class="pagination-item">
+                    <a class="pagination-link" href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                    <a class="pagination-link" href="#">3</a>
+                </li>
+                <li class="pagination-item">
+                    <a class="pagination-link" href="#">Следующая</a>
+                </li>
             </ul>
         </section>
-        <article>
-            <h2>Пара слов о перфораторах</h2>
+        <article class="info">
+            <h2 class="title">Пара слов о перфораторах</h2>
             <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
                 шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </article>
