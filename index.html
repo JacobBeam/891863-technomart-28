@@ -89,9 +89,9 @@
 
     <main>
         <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструметов "Техномарт"</h1>
-        <section class="offers">
+        <section class="container">
             <h2 class="visually-hidden">Мы предлагаем</h2>
-            <ul class="offers-list">
+            <ul class="offers-list offers-wrapper-row">
                 <li class="offers-item offers-item-yellow">
                     <h3 class="offers-item-title">Материалы</h3>
                     <a class="offers-item-link" href="#">На любой вкус</a>
@@ -112,27 +112,31 @@
                     <h3 class="offers-item-title">Доставка</h3>
                     <a class="offers-item-link" href="#">Бесплатно</a>
                 </li>
+                <li class="offers-item offers-promo">
+                    <article class="promo">
+                        <!-- Здесь будет слайдер -->
+                        <div class="promo-card">
+                            <img class="promo-image" src="img/promo-hammerdrill.jpg" width="620" height="266" alt="Рабочий с перфоратором">
+                            <h3 class="promo-title">Перфораторы</h3>
+                            <p>Настоящие мужские игрушки</p>
+                            <a class="button" href="catalog.html">Открыть каталог</a>
+                        </div>
+                        <div class="promo-card">
+                            <img src="img/promo-drill.jpg" width="620" height="266" alt="Рабочий с дрелью">
+                            <h3 class="promo-title">Дрели</h3>
+                            <p>Соседям на радость!</p>
+                            <a class="button" href="catalog.html">Открыть каталог</a>
+                        </div>
+                        <button type="button"><span class="visually-hidden">Назад</span></button>
+                        <button type="button"><span class="visually-hidden">Вперед</span></button>
+                    </article>
+                </li>
             </ul>
-            <article class="promo">
-                <!-- Здесь будет слайдер -->
-                <div class="promo-card">
-                    <img class="promo-image" src="img/promo-hammerdrill.jpg" width="620" height="266" alt="Рабочий с перфоратором">
-                    <h3 class="promo-title">Перфораторы</h3>
-                    <p>Настоящие мужские игрушки</p>
-                    <a class="button" href="catalog.html">Открыть каталог</a>
-                </div>
-                <div class="promo-card">
-                    <img src="img/promo-drill.jpg" width="620" height="266" alt="Рабочий с дрелью">
-                    <h3 class="promo-title">Дрели</h3>
-                    <p>Соседям на радость!</p>
-                    <a class="button" href="catalog.html">Открыть каталог</a>
-                </div>
-                <button type="button"><span class="visually-hidden">Назад</span></button>
-                <button type="button"><span class="visually-hidden">Вперед</span></button>
-            </article>
+
+
         </section>
 
-        <section class="popular">
+        <section class="popular container">
             <div class="section-title">
                 <h2 class="title">Популярные товары:</h2>
                 <a class="button" href="#">Все популярные товары</a>
@@ -143,7 +147,7 @@
                         <img src="img/Bosch9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
                         <h3 class="catalog-article-title">Перфоратор BOSCH BFG 9000</h3>
                         <p class="catalog-article-old-price">32500 Р.</p>
-                        <a class="catalog-article-price" href="#">25500 Р.</a>>
+                        <a class="catalog-article-price" href="#">25500 Р.</a>
                     </article>
                 </li>
                 <li class="popular-item">
@@ -172,7 +176,7 @@
             </ul>
         </section>
 
-        <section class="manufacturers">
+        <section class="manufacturers container">
             <div class="section-title">
                 <h2 class="title">Популярные производители</h2>
                 <a class="button" href="#">Все производители</a>
@@ -206,29 +210,37 @@
         </section>
 
         <section class="service">
-            <h2 class="title">Сервисы</h2>
-            <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-            <!-- Здесь будет слайдер -->
-            <ul class="service-list">
-                <li class="service-item service-item-active">Доставка</li>
-                <li class="service-item">Гарантия</li>
-                <li class="service-item">Кредит</li>
-            </ul>
-            <div class="service-card">
-                <h3 class="service-card-title">Доставка</h3>
-                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-                <img src="img/delivery-img.png" width="468" height="261" alt="Доставка строительных материалов и инструметов">
-            </div>
-            <div class="service-card">
-                <h3 class="service-card-title">Гарантия</h3>
-                <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-                <img src="img/guarantee-img.png" width="389" height="283" alt="Гарантия на весь товар">
-            </div>
-            <div class="service-card">
-                <h3 class="service-card-title">Кредит</h3>
-                <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-                <a class="button" href="#">Отправить заявку</a>
-                <img src="img/credit-img.png" width="465" height="285" alt="Доступный кредит">
+            <div class="container">
+                <h2 class="title">Сервисы</h2>
+                <p>Хороший интернет-магазин отличается от плохого не только ценами!<br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+                <!-- Здесь будет слайдер -->
+                <div class="service-slider">
+                    <ul class="service-list">
+                        <li class="service-item service-item-active">Доставка</li>
+                        <li class="service-item">Гарантия</li>
+                        <li class="service-item">Кредит</li>
+                    </ul>
+                    <div class="service-card-container">
+                        <div class="service-card">
+                            <h3 class="service-card-title">Доставка</h3>
+                            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+                            <img src="img/delivery-img.png" width="468" height="261" alt="Доставка строительных материалов и инструметов">
+                        </div>
+                        <div class="service-card">
+                            <h3 class="service-card-title">Гарантия</h3>
+                            <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь
+                                сами.
+                            </p>
+                            <img src="img/guarantee-img.png" width="389" height="283" alt="Гарантия на весь товар">
+                        </div>
+                        <div class="service-card">
+                            <h3 class="service-card-title">Кредит</h3>
+                            <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+                            <a class="button" href="#">Отправить заявку</a>
+                            <img src="img/credit-img.png" width="465" height="285" alt="Доступный кредит">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -344,14 +356,22 @@
 
     <section class="popup-write-us-form">
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form action="https://echo.htmlacademy.ru/" method="GET">
-            <label for="write-us-name">Ваше имя:</label>
-            <input type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
-            <label for="write-us-email">Ваш e-mail:</label>
-            <input type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
-            <label for="write-us-text">Текст письма:</label>
-            <textarea rows="5" name="write-us-text" id="write-us-text" placeholder="В свободной форме"></textarea>
-            <button type="submit">Оформить заказ</button>
+        <form class="write-us-form" action="https://echo.htmlacademy.ru/" method="GET">
+            <div class="form-wrapper-half">
+                <label class="write-us-label" for="write-us-name">Ваше имя:</label>
+                <input class="write-us-input" type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
+            </div>
+            <div class="form-wrapper-half">
+                <label class="write-us-label" for="write-us-email">Ваш e-mail:</label>
+                <input class="write-us-input" type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
+            </div>
+            <div class="form-wrapper-full">
+                <label class="write-us-label" for="write-us-text">Текст письма:</label>
+                <textarea class="write-us-input" rows="5" name="write-us-text" id="write-us-text" placeholder="В свободной форме"></textarea>
+            </div>
+            <div class="popup-footer">
+                <button class="write-us-submit" type="submit">Оформить заказ</button>
+            </div>
         </form>
         <button type="button">Закрыть</button>
     </section>
