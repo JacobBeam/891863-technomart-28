@@ -114,6 +114,10 @@ img {
     width: 220px;
 }
 
+.search {
+    margin-right: auto;
+}
+
 .search input {
     color: var(--white);
     background-color: inherit;
@@ -142,6 +146,7 @@ img {
 }
 
 .header-link {
+    display: block;
     color: var(--white);
 }
 
@@ -193,11 +198,11 @@ img {
 
 .header-bottom-wrapper {
     display: flex;
+    justify-content: space-between;
     padding: 40px 0px 40px 30px;
 }
 
 .header-info {
-    margin: 0px 90px 0px 0px;
     width: 200px;
     font-style: italic;
     font-size: 16px;
@@ -206,8 +211,6 @@ img {
 }
 
 .header-contacts {
-    display: flex;
-    flex-direction: column;
     width: 270px;
 }
 
@@ -250,11 +253,6 @@ img {
     color: var(--basic-greylight);
 }
 
-.profile {
-    display: flex;
-    flex-direction: column;
-}
-
 .profile-list {
     display: flex;
     margin: 0;
@@ -288,6 +286,7 @@ img {
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-link);
+    display: inline-block;
 }
 
 .account-link:hover {
@@ -304,7 +303,6 @@ img {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .header-navigation-item {
@@ -312,8 +310,7 @@ img {
 }
 
 .navigation-link {
-    display: flex;
-    justify-content: center;
+    display: block;
     color: var(--white);
     background-color: var(--basic-link);
     box-shadow: inset 0px -5px 0px var(--header-background);
@@ -728,7 +725,7 @@ img {
 .catalog-article {
     display: flex;
     flex-direction: column;
-    width: 220px;
+    min-width: 220px;
     min-height: 318px;
     border: 1px solid var(--border-pag);
 }
