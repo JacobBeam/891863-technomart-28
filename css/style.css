@@ -22,7 +22,7 @@
     --error: #ba2732;
     --logo-shadow: #b52933;
     --logo-shadow-active: #8d1e26;
-    --special-ylellow: #ffbf47;
+    --special-yellow: #ffbf47;
     --special-blue: #3bbce3;
     --special-lilac: #dc91d8;
     --special-greenlight: #8ed78f;
@@ -560,7 +560,7 @@ img {
 }
 
 .offers-item-materials {
-    background-color: var(--special-ylellow);
+    background-color: var(--special-yellow);
 }
 
 .offers-item-materials::before {
@@ -640,13 +640,13 @@ img {
     position: relative;
 }
 
-.offers-promo-1 {
+.offers-promo-hammerdrill {
     background-color: var(--background-promo);
     background-image: url("../img/promo-hammerdrill.jpg");
     background-repeat: no-repeat;
 }
 
-.offers-promo-2 {
+.offers-promo-drill {
     background-color: var(--background-promo);
     background-image: url("../img/promo-drill.jpg");
     background-repeat: no-repeat;
