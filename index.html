@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Техномарт</title>
@@ -47,6 +48,37 @@
                     <div class="header-contacts">
                         <a class="header-link-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
                         <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                    </div>
+                    <div class="profile profile-authorization">
+                        <ul class="profile-list">
+                            <li class="profile-item">
+                                <a class="profile-link profile-link-info" href="#">
+                                    <span class="visually-hidden">Профиль</span>
+                                    <svg class="svg-icon profile-svg" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z" fill="#C5C5C5"/>
+										</svg>
+                                </a>
+                            </li>
+                            <li class="profile-item">
+                                <a class="profile-link profile-name" href="#">Равшан Джамшутович</a>
+                            </li>
+                            <li class="profile-item">
+                                <a class="profile-link profile-link-logout" href="#">
+                                    <span class="visually-hidden">Выход</span>
+                                    <svg class="svg-icon profile-svg" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
+										<path d="M2.10591 13.952V3.048C2.12391 2.672 2.27691 1.991 3.11591 1.991H8.14291V0H3.11591C0.937914 0 0.111914 1.81 0.0869141 3.027V13.973C0.111914 15.189 0.937914 17 3.11591 17H8.14291V15.01H3.11591C2.27691 15.01 2.12391 14.327 2.10591 13.952Z" fill="#C5C5C5"/>
+										</svg>
+                                </a>
+                        </ul>
+                        <ul class="account-list">
+                            <li class="account-item">
+                                <a class="account-link" href="#">Мои заказы</a>
+                            </li>
+                            <li class="account-item">
+                                <a class="account-link" href="#">Личный кабинет</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="authorization">
                         <ul class="authorization-list">
@@ -112,7 +144,7 @@
                     <a class="offers-item-link" href="#">Для стройки</a>
                 </li>
                 <li class="offers-item offers-item-sales">
-                    <h3 class="offers-item-title">Скидка 50%</h3>
+                    <h3 class="offers-item-title">Скидки 50%</h3>
                     <a class="offers-item-link" href="#">На 350 товаров</a>
                 </li>
                 <li class="offers-item offers-item-delivery">
@@ -223,7 +255,7 @@
 
         <section class="manufacturers container">
             <div class="section-title">
-                <h2 class="title">Популярные производители</h2>
+                <h2 class="title">Популярные производители:</h2>
                 <a class="button button-manufacturers" href="#">Все производители</a>
             </div>
             <ul class="manufacturers-list">
@@ -256,8 +288,9 @@
 
         <section class="service">
             <div class="container">
-                <h2 class="title">Сервисы</h2>
-                <p class="service-text">Хороший интернет-магазин отличается от плохого не только ценами!<br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+                <h2 class="title title-service">Сервисы</h2>
+                <p class="service-text">Хороший интернет-магазин отличается от плохого не только ценами!</p>
+                <p class="service-text">Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
                 <!-- Здесь будет слайдер -->
                 <div class="service-slider">
                     <ul class="service-list">
@@ -272,12 +305,12 @@
                         </li>
                     </ul>
                     <ul class="service-card-container">
-                        <li class="service-card-delivery service-card-active">
+                        <li class="service-card-delivery  service-card-active">
                             <h3 class="service-card-title">Доставка</h3>
                             <p class="service-card-text">Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
                         </li>
                         <li class="service-card-guarantee">
-                            <h3 class="service-card-title">Гарантия</h3>
+                            <h3 class="service-card-title service-card-title-guarantee">Гарантия</h3>
                             <p class="service-card-text">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь
                                 сами.
                             </p>
@@ -306,9 +339,9 @@
             </section>
 
             <section class="company-contacts">
-                <h2 class="title company-title">Контакты</h2>
+                <h2 class="title company-contacts-title">Контакты</h2>
                 <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-                <a href="https://yandex.ru/maps/" target="_blank">
+                <a href="https://goo.gl/maps/Cah4qiEWSe9XqUtf7" target="_blank">
                     <img src="img/map-small.png" width="300" height="158" alt="Адрес офиса: Большая Конюшенная ул, 12">
                 </a>
                 <a class="button button-write-us" href="#">Заблудились? Напишите нам!</a>
@@ -340,9 +373,9 @@
                     </ul>
                 </div>
                 <div class="footer-top-row-wrapper">
-                    <div class="footer-addres">
-                        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </p>
-                        <p> +7 (812) 555-05-55</p>
+                    <div class="footer-contacts">
+                        <p class="footer-addres">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </p>
+                        <p class="footer-phone"> +7 (812) 555-05-55</p>
                     </div>
                     <ul class="footer-offers-list">
                         <li class="footer-offers-item">
@@ -413,7 +446,7 @@
                 </div>
                 <div class="form-wrapper-full">
                     <label class="write-us-label" for="write-us-text">Текст письма:</label>
-                    <textarea class="write-us-input" rows="5" name="write-us-text" id="write-us-text" placeholder="В свободной форме"></textarea>
+                    <textarea class="write-us-input" rows="4" name="write-us-text" id="write-us-text" placeholder="В свободной форме"></textarea>
                 </div>
             </div>
             <div class="popup-footer">
@@ -427,8 +460,11 @@
 
     <section class="popup-card-full">
         <h2 class="visually-hidden">Полноразмерная интерактивная карта</h2>
-        <img src="img/map-big.png" width="943" height="449" alt="Полноразмерная карта с адресом офиса">
-        <button type="button">Закрыть</button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d564.9009044110971!2d30.32246397689081!3d59.9388585566906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1591829254195!5m2!1sru!2sru"
+            width="943" height="442" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <button type="button" class="button-popup-close">
+			<span class="visually-hidden">Закрыть</span>
+		 </button>
     </section>
 </body>
 

@@ -51,7 +51,7 @@
                     <div class="profile">
                         <ul class="profile-list">
                             <li class="profile-item">
-                                <a class="profile-link" href="#">
+                                <a class="profile-link profile-link-info" href="#">
                                     <span class="visually-hidden">Профиль</span>
                                     <svg class="svg-icon profile-svg" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z" fill="#C5C5C5"/>
@@ -62,7 +62,7 @@
                                 <a class="profile-link profile-name" href="#">Равшан Джамшутович</a>
                             </li>
                             <li class="profile-item">
-                                <a class="profile-link" href="#">
+                                <a class="profile-link profile-link-logout" href="#">
                                     <span class="visually-hidden">Выход</span>
                                     <svg class="svg-icon profile-svg" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
@@ -76,6 +76,22 @@
                             </li>
                             <li class="account-item">
                                 <a class="account-link" href="#">Личный кабинет</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="authorization profile-authorization">
+                        <ul class="authorization-list">
+                            <li class="authorization-item">
+                                <a class="authorization-link authorization-link-login" href="#">
+                                    <svg class="icon-login" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
+												<path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
+											</svg>
+                                    <span>Войти</span>
+                                </a>
+                            </li>
+                            <li class="authorization-item">
+                                <a class="authorization-link authorization-link-registration" href="#">Регистрация</a>
                             </li>
                         </ul>
                     </div>
@@ -140,12 +156,12 @@
                         <div class="range-filter">
                             <div class="range-controls">
                                 <div class="scale">
-                                    <div class="bar" style="width: 60%; margin-left: 10%">
+                                    <div class="bar" style="width: 70%; margin-left: 10%">
                                     </div>
 
                                     <div class="toggle toggle-min" tabindex="0" style="left: 0%">
                                     </div>
-                                    <div class="toggle toggle-max" tabindex="0" style="left: 60%">
+                                    <div class="toggle toggle-max" tabindex="0" style="left: 78%">
                                     </div>
                                 </div>
                             </div>
@@ -153,16 +169,16 @@
                                 <label class="visually-hidden" for="min-price">Минимальная цена</label>
                                 <input type="text" name="min-price" value="0" id="min-price">
 
-                                <span>-</span>
+                                <span>—</span>
                                 <label class="visually-hidden" for="max-price">Максимальная цена</label>
-                                <input type="text" name="max-price" value="15000" id="max-price">
+                                <input type="text" name="max-price" value="30000" id="max-price">
 
                             </div>
                         </div>
                     </fieldset>
 
                     <fieldset class="filter-field">
-                        <legend>Производители:</legend>
+                        <legend class="legend-manufacturers">Производители:</legend>
                         <ul class="filter-field-list">
                             <li class="filter-field-item">
                                 <input class="visually-hidden check-input" type="checkbox" name="company" id="check-bosch" value="Bosch" checked>
@@ -187,7 +203,7 @@
                         </ul>
                     </fieldset>
                     <fieldset class="filter-field">
-                        <legend>Питание:</legend>
+                        <legend class="legend-power">Питание:</legend>
                         <ul class="filter-field-list">
                             <li class="filter-field-item">
                                 <input class="visually-hidden radio-input" type="radio" name="radio-power-supply" id="radio-battery-power" checked>
@@ -207,7 +223,7 @@
                 <p>Сортировка:</p>
                 <ul class="sorting-list">
                     <li class="sorting-item">
-                        <a class="sorting-link sorting-link-active" href="#">По цена</a>
+                        <a class="sorting-link sorting-link-active" href="#">По цене</a>
                     </li>
                     <li class="sorting-item">
                         <a class="sorting-link" href="#">По типу</a>
@@ -431,8 +447,8 @@
                 </div>
                 <div class="footer-top-row-wrapper">
                     <div class="footer-addres">
-                        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </p>
-                        <p> +7 (812) 555-05-55</p>
+                        <p class="footer-addres">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </p>
+                        <p class="footer-phone"> +7 (812) 555-05-55</p>
                     </div>
                     <ul class="footer-offers-list">
                         <li class="footer-offers-item">
