@@ -4,19 +4,18 @@
 <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Техномарт</title>
 </head>
 
-<body class="page-body">
+<body class="page-body page-body-index">
     <header class="header">
         <div class="header-top">
             <div class="container header-top-wrapper">
                 <a class="header-logo"><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип Техномарт"></a>
                 <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
-                    <input type="search" name="search" id="search" value="Поиск:">
+                    <input type="search" name="search" id="search" placeholder="Поиск:">
                     <label for="search" aria-label="Поиск по сайту">
 				<svg class="seach-icon svg-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" fill-opacity="0.3">
 				  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
@@ -342,7 +341,7 @@
                 <h2 class="title company-contacts-title">Контакты</h2>
                 <p>Вы можете забрать товар сами, заехав в наш офис:</p>
                 <a href="https://goo.gl/maps/Cah4qiEWSe9XqUtf7" target="_blank">
-                    <img src="img/map-small.png" width="300" height="158" alt="Адрес офиса: Большая Конюшенная ул, 12">
+                    <img src="img/map-small.png" width="300" height="158" alt="Адрес офиса: Большая Конюшенная ул, 19">
                 </a>
                 <a class="button button-write-us" href="#">Заблудились? Напишите нам!</a>
             </section>
@@ -438,11 +437,11 @@
             <div class="write-us-form-wrapper">
                 <div class="form-wrapper-half">
                     <label class="write-us-label" for="write-us-name">Ваше имя:</label>
-                    <input class="write-us-input" type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
+                    <input class="write-us-input form-name" type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
                 </div>
                 <div class="form-wrapper-half">
                     <label class="write-us-label" for="write-us-email">Ваш e-mail:</label>
-                    <input class="write-us-input" type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
+                    <input class="write-us-input form-email" type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
                 </div>
                 <div class="form-wrapper-full">
                     <label class="write-us-label" for="write-us-text">Текст письма:</label>
@@ -458,14 +457,16 @@
 			</button>
     </section>
 
-    <section class="popup-card-full">
+    <section class="popup-map-full">
         <h2 class="visually-hidden">Полноразмерная интерактивная карта</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d564.9009044110971!2d30.32246397689081!3d59.9388585566906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1591829254195!5m2!1sru!2sru"
             width="943" height="442" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <p><img src="/img/map-big.png" width="943" height="443" alt="Карта с расположением офиса по адресу Большая Конюшенная ул, 19"></p>
         <button type="button" class="button-popup-close">
-			<span class="visually-hidden">Закрыть</span>
-		 </button>
+        <span class="visually-hidden">Закрыть</span>
+        </button>
     </section>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

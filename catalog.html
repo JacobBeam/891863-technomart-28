@@ -9,7 +9,7 @@
     <title>HTML Academy: Техномарт</title>
 </head>
 
-<body>
+<body class="page-body page-body-catalog">
     <header class="header">
         <div class="header-top">
             <div class="container header-top-wrapper">
@@ -156,22 +156,20 @@
                         <div class="range-filter">
                             <div class="range-controls">
                                 <div class="scale">
-                                    <div class="bar" style="width: 70%; margin-left: 10%">
+                                    <div class="bar" style="width: 70%; margin-left: 10%;">
                                     </div>
 
-                                    <div class="toggle toggle-min" tabindex="0" style="left: 0%">
+                                    <div class="toggle toggle-min" tabindex="0" style="left: 0%;">
                                     </div>
-                                    <div class="toggle toggle-max" tabindex="0" style="left: 78%">
+                                    <div class="toggle toggle-max" tabindex="0" style="left: 78%;">
                                     </div>
                                 </div>
                             </div>
                             <div class="price-controls">
                                 <label class="visually-hidden" for="min-price">Минимальная цена</label>
-                                <input type="text" name="min-price" value="0" id="min-price">
-
-                                <span>—</span>
+                                <input type="number" min="0" max="99999" step="1" name="min-price" value="0" id="min-price"> <span>—</span>
                                 <label class="visually-hidden" for="max-price">Максимальная цена</label>
-                                <input type="text" name="max-price" value="30000" id="max-price">
+                                <input type="number" min="0" max="99999" step="1" name="max-price" value="30000" id="max-price">
 
                             </div>
                         </div>
@@ -206,11 +204,11 @@
                         <legend class="legend-power">Питание:</legend>
                         <ul class="filter-field-list">
                             <li class="filter-field-item">
-                                <input class="visually-hidden radio-input" type="radio" name="radio-power-supply" id="radio-battery-power" checked>
+                                <input class="visually-hidden radio-input" type="radio" name="radio-power-supply" id="radio-battery-power" value="radio-battery-power" checked>
                                 <label for="radio-battery-power">Аккумуляторные</label>
                             </li>
                             <li class="filter-field-item">
-                                <input class="visually-hidden radio-input" type="radio" name="radio-power-supply" id="radio-mains-power">
+                                <input class="visually-hidden radio-input" type="radio" name="radio-power-supply" id="radio-mains-power" value="radio-mains-power">
                                 <label for="radio-mains-power">Сетевые</label>
                             </li>
                         </ul>
@@ -223,18 +221,18 @@
                 <p>Сортировка:</p>
                 <ul class="sorting-list">
                     <li class="sorting-item">
-                        <a class="sorting-link sorting-link-active" href="#">По цене</a>
+                        <a class="sorting-link sorting-link-active" href="/catalog.html?filter=price">По цене</a>
                     </li>
                     <li class="sorting-item">
-                        <a class="sorting-link" href="#">По типу</a>
+                        <a class="sorting-link" href="/catalog.html?filter=type">По типу</a>
                     </li>
                     <li class="sorting-item">
-                        <a class="sorting-link" href="#">По функционалу</a>
+                        <a class="sorting-link" href="/catalog.html?filter=functionality">По функционалу</a>
                     </li>
                 </ul>
                 <ul class="sorting-minmax-list">
                     <li class="sorting-minmax-item">
-                        <a class="sorting-minmax-link sorting-minmax-link-active" href="#">
+                        <a class="sorting-minmax-link sorting-minmax-link-active" href="/catalog.html?filter=minmax">
                             <span class="visually-hidden">По возрастанию</span>
                             <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5"/>
@@ -242,7 +240,7 @@
                         </a>
                     </li>
                     <li class="sorting-minmax-item">
-                        <a class="sorting-minmax-link" href="#">
+                        <a class="sorting-minmax-link" href="/catalog.html?filter=maxmin">
                             <span class="visually-hidden">По убыванию</span>
                             <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M5.5 10L0 0H11" fill="#C5C5C5"/>
@@ -508,12 +506,13 @@
         <h2>Товар добавлен в корзину!</h2>
         <div class="popup-footer">
             <a class="button button-in-cart-red" href="#">Оформить заказ</a>
-            <a class="button button-in-cart-white" href="#">Продолжить покупки</a>
+            <a class="button button-in-cart-white button-continue" href="#">Продолжить покупки</a>
         </div>
         <button type="button" class="button-popup-close">
 			  <span class="visually-hidden">Закрыть</span>
 			</button>
     </section>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
