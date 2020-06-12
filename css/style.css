@@ -2078,6 +2078,10 @@ img {
     margin-bottom: 13px;
     border: 2px solid var(--basic-greylight);
     border-radius: 2px;
+    color: var(--black);
+    font-size: 13px;
+    line-height: 24px;
+    padding: 7px 12px;
 }
 
 .write-us-input[type="text"],
@@ -2139,14 +2143,6 @@ img {
 .write-us-label {
     font-size: 18px;
     line-height: 24px;
-}
-
-.write-us-input {
-    border: 2px solid var(--basic-greylight);
-    color: var(--old-price);
-    font-size: 13px;
-    line-height: 24px;
-    padding: 7px 12px;
 }
 
 .popup-map-full {
