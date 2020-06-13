@@ -84,6 +84,32 @@ if (document.body.classList.contains("page-body-index")) {
             }
         }
     })
+
+    var mapFullOpen = document.querySelector(".map-full")
+    var mapFull = document.querySelector(".popup-map-full")
+    var mapFullClose = mapFull.querySelector(".button-popup-close")
+
+    mapFullOpen.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        console.log("click")
+        mapFull.classList.add("popup-open")
+    })
+    mapFullClose.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        mapFull.classList.remove("popup-open")
+    })
+
+    window.addEventListener("keyup", function(evt) {
+        if (evt.keyCode === KEYCODE_ESC) {
+            evt.preventDefault();
+            if (mapFull.classList.contains("popup-open")) {
+                mapFull.classList.remove("popup-open");
+            }
+        }
+    })
+
+
+
 }
 if (document.body.classList.contains("page-body-catalog")) {
     var inCart = document.querySelector(".popup-in-cart")
