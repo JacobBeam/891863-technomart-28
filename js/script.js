@@ -1,4 +1,5 @@
-if (document.querySelector("body").classList.contains("page-body-index")) {
+var KEYCODE_ESC = 27;
+if (document.body.classList.contains("page-body-index")) {
     var writeUsOpen = document.querySelector(".button-write-us");
     var writeUs = document.querySelector(".popup-write-us-form");
     var writeUsClose = writeUs.querySelector(".button-popup-close");
@@ -10,7 +11,7 @@ if (document.querySelector("body").classList.contains("page-body-index")) {
     var storage;
 
     try {
-        storage = localStorage.getItem("name");
+        storage = localStorage.getItem("technomart-write-name");
     } catch (err) {
         isStorageSupport = false;
     }
@@ -40,13 +41,13 @@ if (document.querySelector("body").classList.contains("page-body-index")) {
             writeUs.classList.add("popup-error");
         } else {
             if (isStorageSupport) {
-                localStorage.setItem("name", loginLogin.value);
+                localStorage.setItem("technomart-write-name", loginLogin.value);
             }
         }
     })
 
     window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
+        if (evt.keyCode === KEYCODE_ESC) {
             if (writeUs.classList.contains("popup-write-us-open")) {
                 evt.preventDefault();
                 writeUs.classList.remove("popup-write-us-open");
@@ -75,8 +76,8 @@ if (document.querySelector("body").classList.contains("page-body-index")) {
         inCart.classList.remove("popup-in-cart-open");
     })
 
-    window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
+    window.addEventListener("keyup", function(evt) {
+        if (evt.keyCode === KEYCODE_ESC) {
             if (inCart.classList.contains("popup-in-cart-open")) {
                 evt.preventDefault();
                 inCart.classList.remove("popup-in-cart-open");
@@ -84,7 +85,7 @@ if (document.querySelector("body").classList.contains("page-body-index")) {
         }
     })
 }
-if (document.querySelector("body").classList.contains("page-body-catalog")) {
+if (document.body.classList.contains("page-body-catalog")) {
     var inCart = document.querySelector(".popup-in-cart")
     var inCartOpen = document.querySelectorAll(".btn-buy")
     var inCartClose = inCart.querySelector(".button-popup-close")
@@ -105,10 +106,10 @@ if (document.querySelector("body").classList.contains("page-body-catalog")) {
         inCart.classList.remove("popup-in-cart-open");
     })
 
-    window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
+    window.addEventListener("keyup", function(evt) {
+        if (evt.keyCode === KEYCODE_ESC) {
+            evt.preventDefault();
             if (inCart.classList.contains("popup-in-cart-open")) {
-                evt.preventDefault();
                 inCart.classList.remove("popup-in-cart-open");
             }
         }

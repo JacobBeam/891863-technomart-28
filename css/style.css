@@ -2081,7 +2081,7 @@ img {
     color: var(--black);
     font-size: 13px;
     line-height: 24px;
-    padding: 7px 12px;
+    padding: 3px 10px;
 }
 
 .write-us-input[type="text"],
@@ -2097,8 +2097,6 @@ img {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
-    padding-left: 10px;
-    padding-top: 4px;
 }
 
 .form-wrapper-half,
@@ -2250,7 +2248,6 @@ img {
     right: 11px;
     background-image: url("../img/icon-close.svg");
     border: none;
-    z-index: 1000;
     background-color: transparent;
     transition: all 0.4s ease-in-out;
 }
