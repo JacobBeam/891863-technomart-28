@@ -2200,11 +2200,12 @@ img {
 
 .popup-map-full p {
     position: absolute;
-    top: 0px;
-    left: 0;
-    z-index: -1;
     margin: 0;
     padding: 0;
+}
+
+.image-big-map {
+    position: absolute;
 }
 
 .popup-in-cart {
