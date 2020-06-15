@@ -680,13 +680,13 @@ img {
     position: relative;
 }
 
-.offers-promo-hammerdrill {
+.offers-promo-second {
     background-color: var(--background-promo);
     background-image: url("../img/promo-hammerdrill.jpg");
     background-repeat: no-repeat;
 }
 
-.offers-promo-drill {
+.offers-promo-first {
     background-color: var(--background-promo);
     background-image: url("../img/promo-drill.jpg");
     background-repeat: no-repeat;
@@ -787,15 +787,6 @@ img {
 
 .slider-controls .slider-current {
     background-color: var(--basic-red);
-}
-
-
-/* TODO Убрали слайды */
-
-.promo-card:nth-child(2),
-.service-card:nth-of-type(2),
-.service-card:nth-of-type(3) {
-    display: none
 }
 
 .promo-img {
@@ -1019,21 +1010,19 @@ img {
 .service-card-guarantee {
     display: none;
     background-image: url("../img/guarantee-img.png");
-    background-position: 103% -2px;
+    background-position: 100% -2px;
     background-repeat: no-repeat;
     flex-grow: 1;
+    margin-right: -8px;
 }
 
 .service-card-credit {
     display: none;
     background-image: url("../img/credit-img.png");
-    background-position: 106% 0%;
+    background-position: 100% 0%;
     background-repeat: no-repeat;
     flex-grow: 1;
-}
-
-.service-card-active {
-    display: block;
+    margin-right: -10px;
 }
 
 .service-card-title {
@@ -1064,6 +1053,10 @@ img {
     border-radius: 2px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.service-card-active {
+    display: block;
 }
 
 .company-wrapper {
