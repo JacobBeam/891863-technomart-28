@@ -117,6 +117,7 @@ img {
 
 .button {
     display: inline-block;
+    vertical-align: center;
     font-size: 14px;
     line-height: 18px;
     padding-left: 10px;
@@ -209,6 +210,7 @@ img {
 .header-link {
     position: relative;
     display: inline-block;
+    vertical-align: center;
     color: var(--white);
 }
 
@@ -220,6 +222,7 @@ img {
 
 .header-link-bookmark {
     display: inline-block;
+    vertical-align: center;
     min-width: 153px;
     padding-top: 9px;
     padding-bottom: 9px;
@@ -228,6 +231,7 @@ img {
 
 .header-link-cart {
     display: inline-block;
+    vertical-align: center;
     min-width: 137px;
     padding-top: 9px;
     padding-bottom: 9px;
@@ -265,6 +269,7 @@ img {
 
 .header-link-order {
     display: inline-block;
+    vertical-align: center;
     padding: 10px 17px 9px 19px;
     color: var(--white);
     background-color: var(--basic-green);
@@ -313,6 +318,7 @@ img {
 .header-link-phone {
     position: relative;
     display: inline-block;
+    vertical-align: center;
     padding: 4px 5px 4px 31px;
     margin-bottom: 2px;
     min-width: 270px;
@@ -362,6 +368,7 @@ img {
 
 .authorization-link {
     display: inline-block;
+    vertical-align: center;
     font-size: 21px;
     line-height: 21px;
     color: var(--black);
@@ -428,6 +435,7 @@ img {
 
 .profile-link {
     display: inline-block;
+    vertical-align: center;
     font-size: 21px;
     line-height: 21px;
     color: var(--black)
@@ -493,6 +501,7 @@ img {
     line-height: 18px;
     color: var(--basic-link);
     display: inline-block;
+    vertical-align: center;
 }
 
 .account-link:hover {
@@ -580,6 +589,7 @@ img {
 
 .offers-item-link {
     display: inline-block;
+    vertical-align: center;
     min-width: 135px;
     padding-top: 9px;
     padding-bottom: 10px;
@@ -1002,6 +1012,7 @@ img {
 .service-card-delivery {
     display: none;
     background-image: url("../img/delivery-img.png");
+    background-color: var(--basic-background);
     background-position: 100% 22px;
     background-repeat: no-repeat;
     flex-grow: 1;
@@ -1010,6 +1021,7 @@ img {
 .service-card-guarantee {
     display: none;
     background-image: url("../img/guarantee-img.png");
+    background-color: var(--basic-background);
     background-position: 100% -2px;
     background-repeat: no-repeat;
     flex-grow: 1;
@@ -1019,6 +1031,7 @@ img {
 .service-card-credit {
     display: none;
     background-image: url("../img/credit-img.png");
+    background-color: var(--basic-background);
     background-position: 100% 0%;
     background-repeat: no-repeat;
     flex-grow: 1;
@@ -1137,6 +1150,10 @@ img {
     margin-left: -1px;
 }
 
+.company-contacts img {
+    background-color: var(--special-yellowlight);
+}
+
 .company-contacts img:hover {
     box-shadow: 0px 4px 10px var(--manufacturers-shadow);
 }
@@ -1243,6 +1260,21 @@ img {
 .footer-phone {
     margin-top: 1px;
     margin-left: 1px;
+}
+
+.footer-phone a {
+    text-decoration: : none;
+    color: var(--basic-background);
+}
+
+.footer-phone a:hover {
+    text-decoration: : none;
+    color: var(--basic-red);
+}
+
+.footer-phone a:active {
+    text-decoration: : none;
+    color: var(--error);
 }
 
 .footer-offers-list {
@@ -1417,6 +1449,7 @@ img {
 
 .breadcrumbs-link {
     display: inline-block;
+    vertical-align: center;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
@@ -1646,6 +1679,13 @@ img {
     background-repeat: no-repeat;
 }
 
+.check-input:hover+label,
+.check-input:focus+label,
+.radio-input:hover+label,
+.radio-input:focus+label {
+    color: var(--basic-red);
+}
+
 .check-input:disabled+label::before,
 .radio-input:disabled+label::before {
     opacity: 0.3;
@@ -1662,6 +1702,7 @@ img {
     text-transform: uppercase;
     width: 100%;
     display: inline-block;
+    vertical-align: center;
     padding-top: 9px;
     padding-bottom: 10px;
     margin-top: 13px;
@@ -1869,6 +1910,7 @@ img {
 
 .catalog-article-price {
     display: inline-block;
+    vertical-align: center;
     padding: 10px 5px 10px 10px;
     text-align: center;
     font-weight: bold;
@@ -2158,7 +2200,7 @@ img {
 
 .popup-map-full p {
     position: absolute;
-    top: -10px;
+    top: 0px;
     left: 0;
     z-index: -1;
     margin: 0;
