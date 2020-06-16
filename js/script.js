@@ -112,11 +112,9 @@ if (document.body.classList.contains("page-body-index")) {
 
     nextCard.addEventListener("click", function(evt) {
         evt.preventDefault();
-        for (sliderCard of sliderCards) {
-            sliderCard.classList.toggle("slider-card-current");
-        }
-        for (sliderInput of sliderInputs) {
-            sliderInput.classList.toggle("slider-current");
+        for (let i = 0; i < sliderCards.length; i++) {
+            sliderCards[i].classList.toggle("slider-card-current");
+            sliderInputs[i].classList.toggle("slider-current");
         }
         if (promoSlider.classList.contains("offers-promo-first")) {
             promoSlider.classList.remove("offers-promo-first");
@@ -128,11 +126,9 @@ if (document.body.classList.contains("page-body-index")) {
     })
     previousCard.addEventListener("click", function(evt) {
         evt.preventDefault();
-        for (sliderCard of sliderCards) {
-            sliderCard.classList.toggle("slider-card-current");
-        }
-        for (sliderInput of sliderInputs) {
-            sliderInput.classList.toggle("slider-current");
+        for (let i = 0; i < sliderCards.length; i++) {
+            sliderCards[i].classList.toggle("slider-card-current");
+            sliderInputs[i].classList.toggle("slider-current");
         }
         if (promoSlider.classList.contains("offers-promo-first")) {
             promoSlider.classList.remove("offers-promo-first");
