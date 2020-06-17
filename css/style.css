@@ -547,8 +547,8 @@ img {
 }
 
 .header-navigation-item {
-    flex-grow: 1;
-}
+	 flex-grow: 1;
+	}
 
 .navigation-link {
     display: block;
