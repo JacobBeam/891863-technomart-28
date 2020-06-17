@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie<=11
+*/
+
 :root {
     --basic-red: #ee3643;
     --basic-green: #63a63e;
@@ -85,9 +92,6 @@ img {
     fill: currentColor;
 }
 
-
-/*! Скрыты попапы*/
-
 .page {
     height: 100%;
 }
@@ -95,6 +99,7 @@ img {
 .page-body {
     min-height: 100%;
     display: grid;
+    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
 }
@@ -165,6 +170,14 @@ img {
     padding: 0;
     margin-right: auto;
     position: relative;
+}
+
+.search input::-webkit-input-placeholder {
+    color: var(--white);
+}
+
+.search input::-moz-placeholder {
+    color: var(--white);
 }
 
 .search input::placeholder {
@@ -705,6 +718,7 @@ img {
     background-color: var(--background-promo);
     background-image: url("../img/promo-hammerdrill.jpg");
     background-repeat: no-repeat;
+    -o-object-fit: contain;
     object-fit: contain;
 }
 
@@ -712,6 +726,7 @@ img {
     background-color: var(--background-promo);
     background-image: url("../img/promo-drill.jpg");
     background-repeat: no-repeat;
+    -o-object-fit: contain;
     object-fit: contain;
 }
 
@@ -929,6 +944,7 @@ img {
 }
 
 .manufacturers-link img {
+    -o-object-fit: cover;
     object-fit: cover;
     background-color: var(--white);
 }
@@ -1442,6 +1458,7 @@ img {
 .page-catalog-wrapper {
     display: grid;
     grid-template-columns: 220px 700px;
+    grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content 1fr;
     grid-template-rows: min-content min-content min-content 1fr;
     gap: 20px;
 }
@@ -1669,6 +1686,8 @@ img {
     position: relative;
     display: block;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
 }
 
@@ -2166,6 +2185,18 @@ img {
     min-height: 114px;
 }
 
+.write-us-input::-webkit-input-placeholder {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.write-us-input::-moz-placeholder {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
 .write-us-input::placeholder {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
@@ -2342,6 +2373,7 @@ img {
 .popup-write-us-open,
 .popup-open {
     display: block;
+    -webkit-animation: write-us-open 1s;
     animation: write-us-open 1s;
 }
 
@@ -2350,7 +2382,17 @@ img {
 }
 
 .popup-error {
+    -webkit-animation: shake 0.6s;
     animation: shake 0.6s;
+}
+
+@-webkit-keyframes write-us-open {
+    0% {
+        transform: translateY(370px);
+    }
+    100% {
+        transform: translateY(0), ;
+    }
 }
 
 @keyframes write-us-open {
@@ -2359,6 +2401,26 @@ img {
     }
     100% {
         transform: translateY(0), ;
+    }
+}
+
+@-webkit-keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
     }
 }
 
