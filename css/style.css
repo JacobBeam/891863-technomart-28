@@ -201,8 +201,8 @@ img {
     left: 17px;
 }
 
-.search input:active,
-.search input:focus {
+.search-input:active,
+.search-input:focus {
     color: var(--black);
     background-color: var(--white);
 }
@@ -211,12 +211,12 @@ img {
     fill-opacity: 1;
 }
 
-.search input:hover~label .seach-icon path {
+.search-input:hover~label .seach-icon-path {
     fill-opacity: 1;
 }
 
-.search input:active~label .seach-icon path,
-.search input:focus~label .seach-icon path {
+.search-input:active~label .seach-icon-path,
+.search-input:focus~label .seach-icon-path {
     fill: var(--basic-red);
     fill-opacity: 1;
 }
@@ -399,11 +399,11 @@ img {
     color: var(--basic-red);
 }
 
-.authorization-link:hover .icon-login path {
+.authorization-link:hover .icon-login-path {
     fill: var(--basic-grey);
 }
 
-.authorization-link:active .icon-login path {
+.authorization-link:active .icon-login-path {
     fill: var(--basic-greylight);
 }
 
@@ -481,11 +481,11 @@ img {
     color: var(--basic-greylight);
 }
 
-.profile-link:hover .profile-svg path {
+.profile-link:hover .profile-svg-path {
     fill: var(--basic-grey);
 }
 
-.profile-link:active .profile-svg path {
+.profile-link:active .profile-svg-path {
     fill: var(--basic-greylight);
 }
 
