@@ -547,8 +547,8 @@ img {
 }
 
 .header-navigation-item {
-	 flex-grow: 1;
-	}
+    flex-grow: 1;
+}
 
 .navigation-link {
     display: block;
@@ -1589,7 +1589,7 @@ img {
 }
 
 .filter-field .legend-power {
-    padding-top: 19px;
+    padding-top: 15px;
     margin-bottom: 12px;
 }
 
@@ -1664,6 +1664,17 @@ img {
     color: var(--output)
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
 .filter-field-list {
     margin: 0;
     padding: 0;
@@ -1715,7 +1726,7 @@ img {
     position: absolute;
     width: 25px;
     height: 25px;
-    top: -3px;
+    top: -5px;
     left: -35px;
     background-image: url("../img/radio-off.svg");
     background-position: center;
@@ -1728,15 +1739,59 @@ img {
     background-repeat: no-repeat;
 }
 
-.check-input:hover+label,
-.check-input:focus+label,
-.radio-input:hover+label,
-.radio-input:focus+label {
-    color: var(--basic-red);
+.check-input:hover+label::before,
+.check-input:focus+label::before {
+    background-image: url("../img/checkbox-off-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.check-input:disabled+label::before,
+.check-input:checked:hover+label::before,
+.check-input:checked:focus+label::before {
+    background-image: url("../img/checkbox-on-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.radio-input:hover+label::before,
+.radio-input:focus+label::before {
+    background-image: url("../img/radio-off-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.radio-input:checked:hover+label::before,
+.radio-input:checked:focus+label::before {
+    background-image: url("../img/radio-on-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.check-input:checked:disabled+label::before {
+    background-image: url("../img/checkbox-on-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+.check-input:disabled+label::before {
+    background-image: url("../img/checkbox-off-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
 .radio-input:disabled+label::before {
+    background-image: url("../img/radio-off-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+.radio-input:checked:disabled+label::before {
+    background-image: url("../img/radio-on-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
     opacity: 0.3;
 }
 
@@ -1892,6 +1947,7 @@ img {
     height: 70px;
     top: -1px;
     right: -1px;
+    z-index: 2;
     background-image: url("../img/new-flag.svg");
 }
 
@@ -1904,27 +1960,36 @@ img {
     display: flex;
     justify-content: center;
     margin: auto;
+    width: 100%;
+    min-height: 170px;
+    background-color: var(--white);
 }
 
 .catalog-image img {
     margin-right: 10px;
     margin-bottom: 5px;
+    object-fit: contain;
 }
 
 .catalog-article-offer {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 170px;
+    padding: 37px 31px;
+    background-color: var(--white);
 }
 
 .catalog-article:hover {
     box-shadow: 0px 4px 20px var(--article-shadow);
 }
 
-.catalog-article:hover .catalog-image {
-    display: none;
-}
-
 .catalog-article:hover .catalog-article-offer {
-    display: block;
+    z-index: 1;
 }
 
 .catalog-info {
@@ -1999,12 +2064,11 @@ img {
     font-size: 14px;
     line-height: 18px;
     display: block;
-    min-width: 135px;
-    margin-top: 37px;
+    width: 135px;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    padding: 10px 0 10px 10px;
+    padding: 10px 5px 10px 15px;
     text-align: center;
     text-transform: uppercase;
     color: var(--white);
@@ -2038,10 +2102,11 @@ img {
     font-size: 14px;
     line-height: 18px;
     display: block;
-    min-width: 135px;
+    width: 135px;
     padding: 8px 6px 6px 2px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
     color: var(--basic-link);
@@ -2134,7 +2199,7 @@ img {
     display: none;
     position: fixed;
     top: 100px;
-    right: 0;
+    right: 6.6%;
     bottom: auto;
     left: 0;
     margin: auto;
