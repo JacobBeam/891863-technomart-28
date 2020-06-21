@@ -1,3 +1,4 @@
+
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
@@ -51,6 +52,7 @@
 	--offers-active: rgba(169, 169, 169, 0.3);
 	--manufacturers-shadow: rgba(0, 0, 0, 0.15);
 	--scale-bar: #00CA74;
+	--button-hover:#CA2C37;
 }
 
 body {
@@ -134,9 +136,14 @@ img {
 	background-color: var(--basic-red);
 }
 
+.button:hover {
+	background-color: var(--button-hover);
+}
+
 .button:active {
 	background-color: var(--error);
 }
+
 
 
 /* Header */
@@ -1989,9 +1996,11 @@ input[type=number] {
 	box-shadow: 0px 4px 20px var(--article-shadow);
 }
 
-.catalog-article:hover .catalog-article-offer {
+.catalog-article:hover .catalog-article-offer,
+.catalog-article:focus-within .catalog-article-offer{
 	z-index: 1;
 }
+
 
 .catalog-info {
 	display: flex;
@@ -2041,6 +2050,8 @@ input[type=number] {
 	margin-left: 15px;
 	margin-right: 20px;
 	border-radius: 0 5px 5px 0;
+
+
 }
 
 .catalog-article-price::after {
@@ -2052,6 +2063,17 @@ input[type=number] {
 	border-left-color: var(--basic-red);
 }
 
+.catalog-article-price:focus,
+.catalog-article-price:hover {
+	outline: none;
+	background-color: var(--button-hover);
+}
+
+.catalog-article-price:focus::after,
+.catalog-article-price:hover::after  {
+	outline: none;
+	border-left-color: var(--button-hover)
+}
 .catalog-article-price:active {
 	background-color: var(--error);
 }
@@ -2059,6 +2081,7 @@ input[type=number] {
 .catalog-article-price:active::after {
 	border-left-color: var(--error)
 }
+
 
 .btn-buy {
 	font-family: "Cuprum", Arial, sans-serif;
@@ -2407,6 +2430,12 @@ input[type=number] {
 	padding-right: 9px;
 	text-align: center;
 }
+
+.button-in-cart-white:hover{
+	opacity: 0.8;
+	background-color: var(--white);
+}
+
 
 .button-in-cart-white:active {
 	opacity: 0.5;
